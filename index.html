@@ -12,23 +12,29 @@
             background-color: #f4f4f4;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
         }
         .header {
             display: flex;
             align-items: center;
+            width: 100%;
+            position: relative;
         }
         .header img {
             border-radius: 50%;
             width: 100px;
             margin-right: 20px;
         }
-        .header div {
-            flex-grow: 1;
+        .header-title {
+            flex-grow: 1; 
+            text-align: center; 
+            transform: translateX(-20px); 
         }
         .header div h1 {
             margin: 0;
@@ -36,90 +42,138 @@
         .contact {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             margin-top: 10px;
+            width: 100%;
         }
-        .section {
-            margin-top: 20px;
+        .contact p {
+            margin: 5px 0;
+            padding: 10px;
+        }
+        .highlight {
+            background-color: #001f3f; 
+            color: white;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        .highlight a {
+            color: white;
+            text-decoration: none;
+        }
+        .highlight a:hover {
+            text-decoration: underline;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        .left-column {
+            flex-basis: 65%; 
+            padding-right: 10px;
+        }
+        .right-column {
+            background-color: #dbefff; 
+            flex-basis: 30%; 
+            margin-left: auto; 
+            padding: 10px;
         }
         .section h2 {
             margin-bottom: 10px;
+            color: #001f3f; 
         }
-        .skills ul {
+        .skills ul, .experience ul {
             list-style: none;
             padding: 0;
         }
-        .skills ul li {
+        .skills ul li, .experience ul li {
             margin-bottom: 5px;
+            position: relative;
+            padding-left: 25px; 
+        }
+        .skills ul li::before, .experience ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background-color: #001f3f; 
+            border-radius: 50%; 
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="image/lana-del-rey.jpg" alt="Foto">
-            <div>
-                <h1>Elizabeth Woolridge Grant</h1>
+            <img src="image/lana-del-rey.jpg" alt="Foto de Elizabeth Woolridge Grant">
+            <div class="header-title">
+                <h1>ELIZABETH WOOLRIDGE GRANT</h1>
                 <p>Modelo</p>
             </div>
         </div>
         <div class="contact">
-            <div class="div1">Tell </div>+1 917 123222
-            <p>Email: lanadelrey@gmail.com</p>
-            <p>End: Brooklyn, Rua 4, Nova York</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/seu.nome">honey.moon</a></p>
+            <p><span class="highlight">Tell:</span> +1 917 123 222</p>
+            <p><span class="highlight">Email:</span> <a href="mailto:lanadelrey@gmail.com">lanadelrey@gmail.com</a></p>
+            <p><span class="highlight">End:</span> Brooklyn, Rua 4, Nova York</p>
+            <p><span class="highlight">Lin:</span> <a href="https://www.linkedin.com/in/seu.nome">honey.moon</a></p>
         </div>
-        <div class="section">
-            <h2>OBJETIVO</h2>
-            <p>Busco a posição de modelo em uma agência renomada, onde possa contribuir com minha presença de passarela e habilidades fotográficas. Desejo utilizar minha capacidade de adaptação a diferentes estilos e temas para representar marcas com autenticidade e impacto.</p>
-        </div>
-        <div class="section">
-            <h2>EXPERIÊNCIA PROFISSIONAL</h2>
-            <p><strong>Gerente de Agência de Modelos, 2020-Presente</strong></p>
-            <p>Elite Models, São Paulo</p>
-            <ul>
-                <li>Gerenciar e supervisionar o portfólio de modelos da agência, incluindo recrutamento, seleção e treinamento de novos talentos.</li>
-                <li>Negociar contratos com clientes, garantindo acordos favoráveis para a agência e os modelos, e supervisionar a execução de contratos.</li>
-                <li>Coordenar sessões de fotos, desfiles de moda e outros eventos, garantindo que todos os aspectos logísticos sejam planejados e executados eficientemente.
-                </li>
-            </ul>
-            <p><strong>Booker de Modelos, 2018-Presente</strong></p>
-            <p>Vogue Models, Rio de Janeiro</p>
-            <ul>
-                <li>Estabelecer e manter relacionamentos com clientes, como estilistas, fotógrafos e diretores de casting, para promover os modelos da agência.</li>
-                <li>Organizar a agenda dos modelos, incluindo reservas para desfiles, campanhas publicitárias e eventos, garantindo a maximização do tempo e oportunidades de cada modelo.</li>
-                <li>Orientar e apoiar os modelos em suas carreiras, oferecendo conselhos sobre desenvolvimento de imagem e oportunidades de crescimento.</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>FORMAÇÃO</h2>
-            <p>Kent School, Filosofia</p>
-            <p> Fordham University</p>
-            <p>2008</p>
-            <p>Kent School</p>
-            <p>Universidade</p>
-            <p>2008</p>
-        </div>
-        <div class="section">
-            <h2>HABILIDADES MUSICAIS</h2>
-            <div class="skills">
-                <ul>
-                    <li>Vocal</li>
-                    <li>Violão</li>
-                    <li>Guitarra</li>
-                    <li>Teclado</li>
-                    <li>Poetisa</li>
-                </ul>
+        <div class="left-column column">
+            <div class="section">
+                <h2>OBJETIVO</h2>
+                <p>Busco a posição de modelo em uma agência renomada, onde possa contribuir com minha presença de passarela e habilidades fotográficas. Desejo utilizar minha capacidade de adaptação a diferentes estilos e temas para representar marcas com autenticidade e impacto.</p>
+            </div>
+            <div class="section">
+                <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+                <p><strong>Gerente de Agência de Modelos, 2020-Presente</strong></p>
+                <p>Elite Models, São Paulo</p>
+                <div class="experience">
+                    <ul>
+                        <li>Gerenciar e supervisionar o portfólio de modelos da agência, incluindo recrutamento, seleção e treinamento de novos talentos.</li>
+                        <li>Negociar contratos com clientes, garantindo acordos favoráveis para a agência e os modelos, e supervisionar a execução de contratos.</li>
+                        <li>Coordenar sessões de fotos, desfiles de moda e outros eventos, garantindo que todos os aspectos logísticos sejam planejados e executados eficientemente.</li>
+                    </ul>
+                </div>
+                <p><strong>Booker de Modelos, 2018-Presente</strong></p>
+                <p>Vogue Models, Rio de Janeiro</p>
+                <div class="experience">
+                    <ul>
+                        <li>Estabelecer e manter relacionamentos com clientes, como estilistas, fotógrafos e diretores de casting, para promover os modelos da agência.</li>
+                        <li>Organizar a agenda dos modelos, incluindo reservas para desfiles, campanhas publicitárias e eventos, garantindo a maximização do tempo e oportunidades de cada modelo.</li>
+                        <li>Orientar e apoiar os modelos em suas carreiras, oferecendo conselhos sobre desenvolvimento de imagem e oportunidades de crescimento.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h2>IDIOMAS</h2>
+                <p>Português - Nativo</p>
+                <p>Inglês - Fluente</p>
+                <p>Espanhol - Avançado</p>
+            </div>
+            <div class="section">
+                <h2>CURSOS COMPLEMENTARES</h2>
+                <p>Curso de Fotografia Avançada - carga horária: 40 horas</p>
+                <p>Workshop de Desfiles de Moda - carga horária: 30 horas</p>
             </div>
         </div>
-        <div class="section">
-            <h2>IDIOMAS</h2>
-            <p>Inglês – fluente</p>
-            <p>Português – Falado e escrito</p>
-        </div>
-        <div class="section">
-            <h2>CURSOS COMPLEMENTARES</h2>
-            <p>Gestão de Agências de Modelos (2021) Senac - Carga Horária: 40 horas</p>
-            <p>Técnicas de Casting e Seleção de Modelos (2020) FIT - Carga Horária: 30 horas</p>
+        <div class="right-column column">
+            <div class="section" style="background-color: #dbefff;">
+                <h2>FORMAÇÃO</h2>
+                <p>Kent School, Filosofia</p>
+                <p>Fordham University, 2008</p>
+            </div>
+            <div class="section" style="background-color: #dbefff;">
+                <h2>HABILIDADES</h2>
+                <div class="skills">
+                    <ul>
+                        <li>Vocal</li>
+                        <li>Violão</li>
+                        <li>Guitarra</li>
+                        <li>Teclado</li>
+                        <li>Poetisa</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>
